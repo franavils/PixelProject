@@ -49,7 +49,9 @@ vsp = 0;
 jumpspeed = 7;
 movespeed =2;
 
-image_speed = 0.1;
+fatigue = 0;
+speedAnimation = 0.1;
+
 
 
 

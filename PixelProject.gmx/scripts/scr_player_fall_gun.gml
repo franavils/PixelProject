@@ -1,5 +1,7 @@
 //Animation
 sprite_index = spr_player_fall_gun;
+image_speed = speedAnimation;
+
 //Get the player's input
 scr_get_input();
 

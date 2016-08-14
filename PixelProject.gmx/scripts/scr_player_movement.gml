@@ -7,7 +7,13 @@ if (place_meeting(x,y+1,obj_block))
 
 if (move != 0) 
 {
+        
         image_xscale = move;
+        if (fatigue < 0.1)
+        {
+            fatigue += 0.0005;
+        
+        }
 
 }
 

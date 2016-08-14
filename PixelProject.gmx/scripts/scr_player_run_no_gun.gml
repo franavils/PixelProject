@@ -1,5 +1,6 @@
 //Animation
 sprite_index = spr_player_run;
+image_speed = speedAnimation;
 
 //Get the player's input
 scr_get_input();
