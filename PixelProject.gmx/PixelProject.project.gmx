@@ -19,6 +19,10 @@
     <sprite>sprites\spr_gun</sprite>
     <sprite>sprites\spr_player_idle_gun</sprite>
     <sprite>sprites\spr_player_fall_gun</sprite>
+    <sprite>sprites\spr_player_ladder</sprite>
+    <sprite>sprites\spr_ladder</sprite>
+    <sprite>sprites\spr_hideout</sprite>
+    <sprite>sprites\spr_player_hidden</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bcg_1st_line</background>
@@ -28,16 +32,24 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_death.gml</script>
-    <script>scripts\scr_player_idle_no_gun.gml</script>
-    <script>scripts\scr_player_run_no_gun.gml</script>
-    <script>scripts\scr_player_fall_no_gun.gml</script>
-    <script>scripts\scr_player_idle_gun.gml</script>
-    <script>scripts\scr_player_run_gun.gml</script>
-    <script>scripts\scr_player_fall_gun.gml</script>
-    <script>scripts\scr_get_input.gml</script>
-    <script>scripts\scr_player_collisions.gml</script>
-    <script>scripts\scr_player_movement.gml</script>
-    <script>scripts\scr_player_shooting.gml</script>
+    <script>scripts\scr_enemy_idle.gml</script>
+    <script>scripts\scr_enemy_catching.gml</script>
+    <scripts name="Player_States">
+      <script>scripts\scr_player_idle_no_gun.gml</script>
+      <script>scripts\scr_player_run_no_gun.gml</script>
+      <script>scripts\scr_player_idle_gun.gml</script>
+      <script>scripts\scr_player_fall_gun.gml</script>
+      <script>scripts\scr_player_hidden.gml</script>
+      <script>scripts\scr_player_ladder.gml</script>
+      <script>scripts\scr_player_fall_no_gun.gml</script>
+      <script>scripts\scr_player_run_gun.gml</script>
+    </scripts>
+    <scripts name="Player_Functions">
+      <script>scripts\scr_player_collisions.gml</script>
+      <script>scripts\scr_player_shooting.gml</script>
+      <script>scripts\scr_player_movement.gml</script>
+      <script>scripts\scr_get_input.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -47,6 +59,8 @@
     <object>objects\obj_platform</object>
     <object>objects\obj_bullet</object>
     <object>objects\obj_gun</object>
+    <object>objects\obj_ladder</object>
+    <object>objects\obj_hideout</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>

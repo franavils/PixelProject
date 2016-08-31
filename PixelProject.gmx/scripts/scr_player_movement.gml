@@ -1,5 +1,6 @@
 
 //Jump
+grav = 0.4;
 if (place_meeting(x,y+1,obj_block))
 {
     if (key_jump) vsp = -jumpspeed;

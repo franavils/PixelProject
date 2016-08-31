@@ -1,7 +1,7 @@
 //Animation
 sprite_index = spr_player_idle_gun;
 image_speed = fatigue;
-
+hidden = false;
 if (image_speed <= 0)
 {
     image_index = 0;
@@ -38,5 +38,23 @@ if (!place_meeting(x,y+1,obj_block))
 if (!armedAndDangerous)
 {
     currentState = playerStates.idleNoGun;
+
+}
+if (place_meeting(x,y, obj_ladder) )
+{
+
+    if (!place_meeting(x,y+1,obj_block) && (obj_player.key_up|| obj_player.key_down))
+    {
+    currentState = playerStates.ladder;
+    } else if (place_meeting(x,y+1,obj_block) && (obj_player.key_up))
+    {
+    currentState = playerStates.ladder;
+    }
+}
+
+//Hidden
+if (place_meeting(x,y, obj_hideout) && obj_player.key_up)
+{
+    currentState = playerStates.hidden;
 
 }

@@ -3,7 +3,7 @@
   <spriteName>spr_player_idle</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -33,6 +33,8 @@ enum playerStates
     idleNoGun,
     walkNoGun,
     fallNoGun,
+    ladder,
+    hidden,
     idleGun,
     walkGun,
     fallGun
@@ -47,10 +49,12 @@ grav = 0.4;
 hsp = 0;
 vsp = 0;
 jumpspeed = 7;
-movespeed =2;
+movespeed =1.5;
 
 fatigue = 0;
+hidde = false;
 speedAnimation = 0.1;
+areaDetection = 96;
 
 
 
@@ -101,6 +105,10 @@ key_down = 0;
     case playerStates.walkNoGun: scr_player_run_no_gun();
     break;
     case playerStates.fallNoGun: scr_player_fall_no_gun();
+    break;
+    case playerStates.ladder: scr_player_ladder();
+    break;
+    case playerStates.hidden: scr_player_hidden();
     break;
     
     case playerStates.idleGun: scr_player_idle_gun();
